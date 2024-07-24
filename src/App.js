@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.scss';
+import Header from './components/Header';
+import LayoutDefault from './components/LayoutDefault';
 
 function App() {
   return (
       <>
-        <div>Hello</div>
+        <LayoutDefault/>
       </>
   );
 }
