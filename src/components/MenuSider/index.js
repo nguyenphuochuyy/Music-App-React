@@ -1,4 +1,4 @@
-import { Collapse, Menu } from "antd"
+import { Menu } from "antd"
 import { RiAlbumFill } from "react-icons/ri";
 import { FaHome , FaMusic } from "react-icons/fa";
 import { IoMic } from "react-icons/io5";
@@ -8,9 +8,9 @@ import { MdFavoriteBorder } from "react-icons/md";
 import {HistoryOutlined} from "@ant-design/icons"
 import { BsCalendar2EventFill } from "react-icons/bs";
 import { IoMdAddCircle } from "react-icons/io";
-
 function MenuSider(props){
-    const {collapsed} = props;
+    const {collapse} = props;
+    console.log(collapse);
     const items = [
         {
             label : "Home",
@@ -50,9 +50,9 @@ function MenuSider(props){
 
         },
         {
-            label : <>
-                { (collapsed? (<>...</>) : (<>Music</>)) }
-            </>
+            label :<>
+                         { (collapse? (<>...</>) : (<>Events</>)) }
+                     </>
         },
         {
             label : "Analytics",
@@ -73,7 +73,7 @@ function MenuSider(props){
         },
         {
             label :<>
-                         { (collapsed? (<>...</>) : (<>Events</>)) }
+                         { (collapse? (<>...</>) : (<>Events</>)) }
                      </>
         },
         {
